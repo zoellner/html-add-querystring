@@ -1,0 +1,36 @@
+{
+  "name": "html-add-querystring",
+  "version": "1.0.0",
+  "description": "Add querystring parameters to all links in html code",
+  "main": "index.js",
+  "scripts": {
+    "test": "npm run lint && node test.js",
+    "lint": "npx eslint ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zoellner/html-add-querystring.git"
+  },
+  "keywords": [
+    "html",
+    "querystring",
+    "query",
+    "string",
+    "utm",
+    "parameters",
+    "utm"
+  ],
+  "author": "Andreas Zoellner",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/zoellner/html-add-querystring/issues"
+  },
+  "homepage": "https://github.com/zoellner/html-add-querystring#readme",
+  "dependencies": {
+    "cheerio": "^1.0.0-rc.2",
+    "lodash.defaults": "^4.2.0"
+  },
+  "devDependencies": {
+    "eslint": "^4.19.1"
+  }
+}
