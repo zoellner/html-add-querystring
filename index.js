@@ -6,7 +6,16 @@ const cheerio = require('cheerio');
 
 
 function modifyUrl(value, params, options) {
-  const parsedUrl = new URL(value, options.base);
+  let parsedUrl;
+  try {
+    parsedUrl = new URL(value, options.base);
+  } catch (err) {
+    if (err.code === 'ERR_INVALID_URL' && !options.strict) {
+      return value;
+    } else {
+      throw err;
+    }
+  }
   Object.keys(params).forEach((key) => {
     if (!parsedUrl.searchParams.has(key) || options.existing === 'overwrite') {
       parsedUrl.searchParams.set(key, params[key]);
@@ -14,7 +23,7 @@ function modifyUrl(value, params, options) {
       parsedUrl.searchParams.append(key, params[key]);
     }
   });
-  return parsedUrl.toString()
+  return parsedUrl.toString();
 }
 
 //options:
@@ -25,7 +34,8 @@ function haq(html, params, options) {
   options = options || {};
   defaults(options, {
     existing: 'append',
-    htmlparserOptions: {decodeEntities: false}
+    htmlparserOptions: {decodeEntities: false},
+    strict: true
   });
 
   const $ = cheerio.load(html, options.htmlparserOptions);
@@ -39,5 +49,3 @@ function haq(html, params, options) {
 
 
 module.exports = haq;
-
-
