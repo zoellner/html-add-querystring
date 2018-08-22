@@ -22,5 +22,14 @@ Note that the resulting html is somewhat cleaned up (head added in example aboce
 A good use case for this package is to add UTM Parameters to links in emails.
 If you process includes rendering emails from templates (potentially pug or others), inlining css with [Juice](https://github.com/Automattic/juice), then this is for you. Simply feed the resulting html through this package with the appropriate utm parameters and all links in the email will have UTM Parameters.
 
+If you're using "invalid urls", e.g. placeholder variables, you can pass an options object `{strict: false}` to haq as third parameter to simply return invalid urls instead of throwing an error.
+
+## Changelog
+### [1.1.0] - 2018-08-22
+#### Added
+- `strict: false` option
+#### Changed
+- updated dev dependencies
+
 ## License
 MIT
