@@ -31,6 +31,6 @@
     "lodash.defaults": "^4.2.0"
   },
   "devDependencies": {
-    "eslint": "^5.4.0"
+    "eslint": "^5.8.0"
   }
 }
