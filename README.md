@@ -25,6 +25,8 @@ If you process includes rendering emails from templates (potentially pug or othe
 If you're using "invalid urls", e.g. placeholder variables, you can pass an options object `{strict: false}` to haq as third parameter to simply return invalid urls instead of throwing an error.
 
 ## Changelog
+### [1.2.0] - 2019-05-14
+- dependency updates
 ### [1.1.0] - 2018-08-22
 #### Added
 - `strict: false` option
