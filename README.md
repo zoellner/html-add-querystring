@@ -1,3 +1,6 @@
+[![NPM](https://img.shields.io/npm/v/html-add-querystring)](https://npmjs.org/package/html-add-querystring)
+
+
 # html-add-querystring
 Add querystring parameters to all links in html code
 
