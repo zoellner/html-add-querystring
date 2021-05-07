@@ -38,7 +38,7 @@ function haq(html, params, options) {
     strict: true
   });
 
-  const $ = cheerio.load(html, options.htmlparserOptions);
+  const $ = cheerio.load(html, defaults(options.htmlparserOptions, {_useHtmlParser2: true}));
 
   $('a').each((i, elem) => {
     $(elem).attr('href', (i, value) => modifyUrl(value, params, options));
