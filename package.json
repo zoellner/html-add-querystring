@@ -27,7 +27,7 @@
   },
   "homepage": "https://github.com/zoellner/html-add-querystring#readme",
   "dependencies": {
-    "cheerio": "^1.0.0-rc.9",
+    "cheerio": "^1.0.0-rc.10",
     "lodash.defaults": "^4.2.0"
   },
   "devDependencies": {
