@@ -1,6 +1,6 @@
 {
   "name": "html-add-querystring",
-  "version": "1.4.3",
+  "version": "1.5.0",
   "description": "Add querystring parameters to all links in html code",
   "main": "index.js",
   "scripts": {
